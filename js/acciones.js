@@ -13,18 +13,18 @@ document.addEventListener ("deviceready", onDeviceReady,false);
 	}
 
 	function getPosition(){
-		var options={
-			enableHighAccuracy:true,
-			maximumAge:3600000
+		var options = {
+			enableHighAccuracy : true,
+			maximumAge : 3600000
 		}
 
 		var watchID=navigator.geolocation.getCurrentPosition(onSuccess, onError, options);
 
-		function onSuccess(position){
+		function onSuccess(position) {
 
-			alert('Latitude: '	+position.coords.Latitude		+'\n'+
-
+			alert('Latitude: '	+position.coords.latitude		+'\n'+
 				'Longitude: '	+position.coords.longitude 		+'\n');
+		};
 
 			function onError(error){
 				alert('code: '	+error.code 	+'\n' +'message: ' +error.message +'\n');
