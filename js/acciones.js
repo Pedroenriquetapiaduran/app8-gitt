@@ -1,13 +1,13 @@
 // JavaScript Document
 
-$(document).ready(function(e){
+$(document).ready(function (e){
 document.addEventListener ("deviceready", onDeviceReady,false);
 
 });
 
-		function onDeviceReady(){
+		function onDeviceReady(e){
 
-		$('#posicion').on ('click',function(){
+		$('#posicion').on ('click',function(e){
 			getPosition();
 		});
 	}
@@ -27,6 +27,6 @@ document.addEventListener ("deviceready", onDeviceReady,false);
 		};
 
 			function onError(error){
-				alert('code: '	+error.code 	+'\n' +'message: ' +error.message +'\n');
+				alert('code: '	+error.code 	+'\n' + 'message: ' + error.message +'\n');
 			}
 		}
